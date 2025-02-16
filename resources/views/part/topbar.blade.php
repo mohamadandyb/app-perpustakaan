@@ -1,14 +1,14 @@
 @push('styles')
     <style>
-        /* Aturan untuk menyembunyikan sidebar */
-        body.sidebar-toggled #sidebar {
-            display: none;
+        /* Style untuk sidebar ketika toggled */
+        .sidebar.toggled {
+            width: 0 !important;
+            overflow: hidden;
         }
 
-        /* Aturan untuk menunjukkan sidebar */
-        #sidebar {
-            display: block;
-            /* Sesuaikan dengan layout dan styling Anda */
+        /* Style untuk body ketika sidebar toggled */
+        body.sidebar-toggled .sidebar {
+            width: 0 !important;
         }
     </style>
 @endpush
@@ -24,12 +24,15 @@
     <!-- Page level custom scripts -->
     <script>
         $(document).ready(function() {
-            // Pastikan sidebarToggleTop bekerja untuk men-toggle sidebar
             $('#sidebarToggleTop').on('click', function(e) {
                 e.preventDefault();
-                // Menyembunyikan/menampilkan sidebar
                 $('body').toggleClass('sidebar-toggled');
-                $('#sidebar').toggleClass('toggled');
+                $('.sidebar').toggleClass('toggled');
+                
+                // Tambahkan console.log untuk debugging
+                console.log('Sidebar toggle clicked');
+                console.log('Body classes:', $('body').attr('class'));
+                console.log('Sidebar classes:', $('.sidebar').attr('class'));
             });
         });
     </script>

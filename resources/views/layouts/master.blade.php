@@ -76,11 +76,11 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Are you sure you want to logout?</p>
+                                    <p>Apakah kamu yakin untuk logout?</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-outline-primary"
-                                        data-dismiss="modal">Cancel</button>
+                                        data-dismiss="modal">Batal</button>
                                     <a href="{{ route('logout') }}" class="btn btn-outline-danger"
                                         onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">

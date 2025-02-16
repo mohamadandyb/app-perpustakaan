@@ -21,20 +21,20 @@ class DatabaseSeeder extends Seeder
         //App\models\User::factory(10)->create();
 
         User::create([
-            'name' => 'Admin',
+            'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin123'),
             'isAdmin' => '1',
         ]);
         User::create([
-            'name' => 'Andy',
-            'email' => 'andy@gmail.com',
+            'name' => 'Andy Baharuddin',
+            'email' => 'andyb@outlook.com',
             'password' => Hash::make('12345678'),
             'isAdmin' => '0',
         ]);
         User::create([
-            'name' => 'Baharuddin',
-            'email' => 'Baharuddin@gmail.com',
+            'name' => 'Josh Brolin',
+            'email' => 'joshbrolin@gmail.com',
             'password' => Hash::make('user1234'),
             'isAdmin' => '0',
         ]);
@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
 
         Profile::create([
             'npm' => '230101020035',
-            'prodi' => 'PJJ Sistem Informasi',
+            'prodi' => 'Sistem Informasi',
             'alamat' => 'Jakarta',
             'noTelp' => '081234567891',
             'users_id' => '2',
@@ -104,6 +104,7 @@ class DatabaseSeeder extends Seeder
         Kategori::create([
             'nama' => 'Horror',
         ]);
+        
         Buku::create([
             'kode_buku' => 'LSK-01',
             'Judul' => 'Laskar Pelangi',
